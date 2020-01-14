@@ -1,0 +1,11 @@
+It's NOT possible to pass ref cursors via dblinks.
+That's basically because a cursor is a memory object and not a type.
+Alternatives are:
+a) pass a table_type (example: TYPE tabby IS TABLE OF record_type; ret tabby; and return ret)
+b) direct connect to tables and extract data from there
+
+
+References:
+https://stackoverflow.com/a/7790100/11532505
+https://asktom.oracle.com/pls/asktom/asktom.search?tag=unable-to-retrieve-sys-refcursor-values-from-remote-function
+https://asktom.oracle.com/pls/apex/asktom.search?tag=returning-result-set-from-stored-procedure-over-a-database-link
