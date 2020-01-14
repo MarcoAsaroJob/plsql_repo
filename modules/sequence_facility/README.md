@@ -18,8 +18,8 @@ Related to your needs, you could add optional fields like FLG_PK or DESCRIPTION,
 The main purpose is to instant get the value we need without knowing the sequence name or even if doesn't exists a sequence related.
 
 How? Thanks to those functions:
-- FUNCTION UTL_SEQ_NEXTVAL(NOME_TAB IN VARCHAR2) RETURN NUMBER
-- FUNCTION UTL_SEQ_NEXTVAL_FIELD(NOME_TAB IN VARCHAR2, NOME_FIELD IN VARCHAR2) RETURN NUMBER
+-     FUNCTION UTL_SEQ_NEXTVAL(NOME_TAB IN VARCHAR2) RETURN NUMBER
+-     FUNCTION UTL_SEQ_NEXTVAL_FIELD(NOME_TAB IN VARCHAR2, NOME_FIELD IN VARCHAR2) RETURN NUMBER
 
 ## UTL_SEQ_NEXTVAL
 Use this only if your usage is flat: each table have only one field with a sequence
@@ -47,9 +47,9 @@ It's designed to auto-align a sequence to the current max(NOME_FIELD) of the NOM
 A typical example of usage is this:
 
 - Flat usage example
-    INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL('departments'), 'San Francisco Facility');
+-    INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL('departments'), 'San Francisco Facility');
 - non flat usage example
-    INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL_FIELD('departments','dep_id'), 'San Francisco Facility');
+-    INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL_FIELD('departments','dep_id'), 'San Francisco Facility');
 
 To re-align the sequence, it's enough a snippet like this:
 
