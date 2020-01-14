@@ -2,13 +2,13 @@
 
 From the need to have under control each sequence, expecially while you're operating into a schema created by third persons where you have almost zero documentation and you have to investigate to discover how thing works.
 It's also helpful in envirorment from Oracle12 and above to keep a relation between identity sequences and their tables without create synonyms.
-[
+
 CREATE TABLE UTL_SEQUENCE_FACILITY (
   NOME_TABELLA  VARCHAR2(30),
   NOME_CAMPO    VARCHAR2(30),
   NOME_SEQUENZA VARCHAR2(30) --values: sequence_name; '-' if NO sequence is used (aka: max+1)
 );
-]
+
 CREATE UNIQUE INDEX IX_UTL_SEQFAL ON UTL_SEQUENCE_FACILITY(NOME_TABELLA, NOME_CAMPO, NOME_SEQUENZA);
 
 Wich this table you may connect each field who have a sequences of each table to its own sequence.
