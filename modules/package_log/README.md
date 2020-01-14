@@ -1,6 +1,6 @@
 # Simple PKG_LOGS
 
-A simple snipped for a default package to manage logs into a file, specialized by type (INFO, WARN, ERROR, DEBUG).
+A simple snippet for a default package to manage logs into a file, specialized by type (INFO, WARN, ERROR, DEBUG).
 
 TODO:
 - Add table log support
