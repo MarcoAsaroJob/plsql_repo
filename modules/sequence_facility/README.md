@@ -47,9 +47,9 @@ It's designed to auto-align a sequence to the current max(NOME_FIELD) of the NOM
 A typical example of usage is this:
 
 - Flat usage example
--    INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL('departments'), 'San Francisco Facility');
+-     INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL('departments'), 'San Francisco Facility');
 - non flat usage example
--    INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL_FIELD('departments','dep_id'), 'San Francisco Facility');
+-     INSERT INTO departments (dep_id, dep_name) VALUES (UTL_SEQ_NEXTVAL_FIELD('departments','dep_id'), 'San Francisco Facility');
 
 To re-align the sequence, it's enough a snippet like this:
 
