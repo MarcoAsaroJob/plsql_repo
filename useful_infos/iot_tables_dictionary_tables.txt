@@ -1,0 +1,5 @@
+Per tabelle di dizionario, usare le IOT: Index-organized Tables.
+NOTA: Rownum NON funziona su questo tipo di tabelle.
+
+https://oracle-base.com/articles/8i/index-organized-tables#Create
+http://www.dba-oracle.com/t_index_organized_tables.htm
