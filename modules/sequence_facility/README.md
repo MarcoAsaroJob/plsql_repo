@@ -11,7 +11,7 @@ It's also helpful in envirorment from Oracle12 and above to keep a relation betw
 
 CREATE UNIQUE INDEX IX_UTL_SEQFAL ON UTL_SEQUENCE_FACILITY(NOME_TABELLA, NOME_CAMPO, NOME_SEQUENZA);
 
-Wich this table you may connect each field who have a sequences of each table to its own sequence.
+Which this table you may connect each field who have a sequences of each table to its own sequence.
 This way with a simple query you can instant retrieve all informations you need.
 Related to your needs, you could add optional fields like FLG_PK or DESCRIPTION, but for now keep it simple.
 
