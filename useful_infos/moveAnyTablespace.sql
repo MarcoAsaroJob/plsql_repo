@@ -29,3 +29,6 @@ ALTER TABLESPACE RETIM_SPACE
                  TO '/volu1/RETIM_SPACE.dbf';
 --5) Riconnetti il tablespace
 ALTER TABLESPACE RETIM_SPACE ONLINE;
+
+--https://docs.oracle.com/cd/B28359_01/server.111/b28310/dfiles005.htm#ADMIN11430
+--https://docs.oracle.com/cd/B28359_01/server.111/b28310/dfiles008.htm#ADMIN11437
